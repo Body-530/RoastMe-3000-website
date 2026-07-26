@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoastMe 3000</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+
+    <h1 id="title">🔥 RoastMe 3000 😈</h1>
+
+    <p class="subtitle">
+        Press the button... if you dare.
+    </p>
+
+    <div class="category-buttons">
+        <button class="category active" data-category="beginner">😇 Beginner</button>
+        <button class="category" data-category="developer">💻 Developer</button>
+        <button class="category" data-category="gamer">🎮 Gamer</button>
+        <button class="category" data-category="school">📚 School</button>
+        <button class="category" data-category="ai">🤖 AI</button>
+        <button class="category" data-category="savage">🔥 Savage</button>
+    </div>
+
+    <button id="roastButton">
+        🔥 ROAST ME 🔥
+    </button>
+
+    <div id="roastBox">
+        Click the button to receive your destiny...
+    </div>
+
+    <div class="buttons">
+        <button id="copyBtn">📋 Copy Roast</button>
+        <button id="darkModeBtn">🌙 Dark Mode</button>
+    </div>
+
+    <div class="stats">
+        <p>Roasts Given:
+            <span id="counter">0</span>
+        </p>
+
+        <p>Legendary Roasts:
+            <span id="legendCounter">0</span>
+        </p>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

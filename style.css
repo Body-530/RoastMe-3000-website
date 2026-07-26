@@ -1,0 +1,213 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#6a11cb,#2575fc);
+    transition:.4s;
+    overflow:hidden;
+}
+
+.container{
+    width:90%;
+    max-width:900px;
+    padding:40px;
+    border-radius:25px;
+    text-align:center;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(15px);
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
+    color:white;
+}
+
+h1{
+    font-size:3rem;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    opacity:.9;
+    margin-bottom:30px;
+}
+
+.category-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:12px;
+    margin-bottom:30px;
+}
+
+.category{
+    padding:12px 20px;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    background:white;
+    color:#333;
+    font-weight:600;
+    transition:.3s;
+}
+
+.category:hover{
+    transform:translateY(-4px);
+}
+
+.category.active{
+    background:#ffb703;
+}
+
+#roastButton{
+    font-size:1.8rem;
+    font-weight:bold;
+    padding:25px 60px;
+    border:none;
+    border-radius:60px;
+    cursor:pointer;
+    background:#ff4d4d;
+    color:white;
+    transition:.25s;
+    box-shadow:0 10px 30px rgba(0,0,0,.3);
+}
+
+#roastButton:hover{
+    transform:scale(1.08);
+}
+
+#roastButton:active{
+    transform:scale(.95);
+}
+
+#roastBox{
+    margin-top:35px;
+    padding:25px;
+    min-height:130px;
+    font-size:1.4rem;
+    border-radius:18px;
+    background:rgba(255,255,255,.2);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    transition:.4s;
+}
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    margin-top:30px;
+    flex-wrap:wrap;
+}
+
+.buttons button{
+    padding:14px 22px;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    background:white;
+    font-weight:600;
+    transition:.3s;
+}
+
+.buttons button:hover{
+    transform:translateY(-3px);
+}
+
+.stats{
+    margin-top:35px;
+    display:flex;
+    justify-content:center;
+    gap:50px;
+    font-size:1.1rem;
+}
+
+.dark{
+    background:linear-gradient(135deg,#111,#000);
+}
+
+.dark .container{
+    background:rgba(20,20,20,.55);
+}
+
+.dark .category,
+.dark .buttons button{
+    background:#2f2f2f;
+    color:white;
+}
+
+.dark #roastBox{
+    background:rgba(255,255,255,.08);
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.fade{
+    animation:fadeIn .5s ease;
+}
+
+@keyframes shake{
+    0%{transform:translateX(0);}
+    20%{transform:translateX(-6px);}
+    40%{transform:translateX(6px);}
+    60%{transform:translateX(-6px);}
+    80%{transform:translateX(6px);}
+    100%{transform:translateX(0);}
+}
+
+.shake{
+    animation:shake .4s;
+}
+
+@keyframes glow{
+    0%{
+        box-shadow:0 0 10px gold;
+    }
+    50%{
+        box-shadow:0 0 35px orange;
+    }
+    100%{
+        box-shadow:0 0 10px gold;
+    }
+}
+
+.legendary{
+    animation:glow 1s infinite;
+}
+
+@media(max-width:700px){
+
+    h1{
+        font-size:2rem;
+    }
+
+    #roastButton{
+        width:100%;
+        padding:20px;
+        font-size:1.4rem;
+    }
+
+    .stats{
+        flex-direction:column;
+        gap:12px;
+    }
+
+} 
+
+//////
+button{}
